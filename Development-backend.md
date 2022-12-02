@@ -97,3 +97,103 @@ https://docs.nestjs.com/techniques/database
     $ yarn install joi
 
 <br/>
+### 019. Our First Entity
+
+<br/>
+
+Run pgadmin in docker container:
+
+```
+$ docker run -e PGADMIN_DEFAULT_EMAIL='postgres@test.com' -e PGADMIN_DEFAULT_PASSWORD='password1234' -p 5555:80 --name pgadmin dpage/pgadmin4
+```
+
+<br/>
+
+http://localhost:5555/
+
+```
+login: postgres@test.com
+pass: password1234
+```
+
+<br/>
+
+Try to connect to local "host ip" - not localhost
+
+<br/>
+
+### 020. Data Mapper vs Active Record
+
+<br/>
+
+### 021. Injecting The Repository
+
+<br/>
+
+http://localhost:3000/graphql
+
+<br/>
+
+```
+{
+    restaurants {
+        id
+    }
+}
+```
+
+<br/>
+
+![Application](/img/pic-part01-les021-pic01.png?raw=true)
+
+<br/>
+
+### 022. Recap
+
+<br/>
+
+### 023. Create Restaurant
+
+<br/>
+
+### 024. Mapped Types
+
+<br/>
+
+### 025. Optional Types and Columns
+
+<br/>
+
+```
+// CREATE RESTAURANT
+mutation {
+  createRestaurant(input: {
+    name: "Nico N",
+    isVegan: false,
+    address: "nico address"
+  })
+}
+```
+
+<br/>
+
+**returns:**
+
+```
+{
+  "data": {
+    "createRestaurant": true
+  }
+}
+```
+
+<br/>
+
+### 026-027. Update Restaurant
+
+<br/>
+
+```
+// UPDATE RESTAURANT
+mutation {
+  updateRestaurant(input: {
