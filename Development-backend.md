@@ -197,3 +197,102 @@ mutation {
 // UPDATE RESTAURANT
 mutation {
   updateRestaurant(input: {
+    id: 2,
+    data: {
+      name: "Nico K",
+    isVegan: true,
+    address: "nico address upd"
+    }
+
+  })
+}
+```
+
+<br/>
+
+```
+{
+    restaurants {
+        id,
+      name,
+      isVegan
+      address
+    }
+}
+```
+
+<br/>
+
+### 028. User Module Introduction
+
+<br/>
+
+### 029. User Model
+
+    $ nest generate module users
+    $ nest generate module common
+
+<br/>
+
+### 030. User Resolver and Service
+
+<br/>
+
+### 031-033. Create Account Mutation
+
+```
+// CREATE ACCOUNT OWNER
+mutation {
+  createAccount(input: {
+    email: "owner@gmail.com",
+    password: "pass1234"
+    role:Owner
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+**returns:**
+
+```
+{
+  "data": {
+    "createAccount": {
+      "ok": true,
+      "error": null
+    }
+  }
+}
+```
+
+<br/>
+
+### 034. An Alternative Error
+
+<br/>
+
+### 035. Hashing Passwords
+
+    $ yarn install bcrypt
+    $ yarn install --save-dev @types/bcrypt
+
+<br/>
+
+### 036-037. Log In
+
+```
+// LOGIN
+mutation {
+  login(input: {
+    email: "owner@gmail.com",
+    password: "pass1234"
+  }){
+    ok
+    error
+    token
+  }
+}
