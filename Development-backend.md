@@ -296,3 +296,104 @@ mutation {
     token
   }
 }
+```
+
+<br/>
+
+```
+{
+  "data": {
+    "login": {
+      "ok": true,
+      "error": null,
+      "token": "llllllllllllll"
+    }
+  }
+}
+```
+
+<br/>
+
+### 038. Introduction to Authentication
+
+<br/>
+
+### 039. Generating JWT
+
+    $ yarn install jsonwebtoken
+    $ yarn install --save-dev @types/jsonwebtoken
+
+<br/>
+
+https://randomkeygen.com/
+
+<br/>
+
+### 040. JWT and Modules
+
+https://jwt.io/
+
+    $ nest generate module jtw
+
+<br/>
+
+### 041-043. JWT Module
+
+    $ nest generate service jwt
+
+<br/>
+
+### 044. Middlewares in NestJS
+
+<br/>
+
+### 045. JWT Middleware
+
+<br/>
+
+### 046. GraphQL Context
+
+```
+// LOGIN
+```
+
+<br/>
+
+```
+// ME
+{
+  me {
+    email
+    role
+  }
+}
+```
+
+<br/>
+
+```
+// HTTP Headers
+{
+  "x-jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE3NjMxMTQyfQ.ggR22bX-sBM-hAOv5gcYylEL6-fvAfd7VIYgJVu1y5I"
+}
+```
+
+<br/>
+
+### 047. AuthGuard
+
+    $ nest generate module auth
+
+<br/>
+
+### 048. AuthUser Decorator
+
+<br/>
+
+```
+// ME
+```
+
+<br/>
+
+**returns**
