@@ -397,3 +397,102 @@ https://jwt.io/
 <br/>
 
 **returns**
+
+```
+{
+  "data": {
+    "me": {
+      "email": "myemail@gmail.com"
+    }
+  }
+}
+```
+
+<br/>
+
+### 049. Recap
+
+<br/>
+
+### 050. userProfile Mutation
+
+```
+{
+  userProfile(userId:1) {
+    ok,
+    error,
+    user {
+      id
+    }
+  }
+}
+```
+
+<br/>
+
+**returns**
+
+```
+{
+  "data": {
+    "userProfile": {
+      "ok": true,
+      "error": null,
+      "user": {
+        "id": 1
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+### 051-053. updateProfile
+
+```
+// UPDATE PASSWORD
+mutation{
+  editProfile(input: {
+    password:"123"
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+mutation {
+  login(input: {
+    email: "myemail@gmail.com",
+    password: "123"
+  }){
+    ok
+    error
+    token
+  }
+}
+```
+
+<br/>
+
+### 054. Recap
+
+<br/>
+
+### 055. Verification Entity
+
+<br/>
+
+### 056. Creating Verifications
+
+    $ yarn install uuid @types/uuid
+
+<br/>
+
+### 056-057. Verifying User
+
+<br/>
