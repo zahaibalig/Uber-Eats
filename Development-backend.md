@@ -496,3 +496,103 @@ mutation {
 ### 056-057. Verifying User
 
 <br/>
+### 059. Cleaning the Code
+
+<br/>
+
+### 060. Mailgun Setup
+
+Domain -> Sandbox###### -> Authorized Recipients
+
+Add your email address
+
+<br/>
+
+### 061. Mail Module Setup
+
+    $ nest genete module mail
+
+<br/>
+
+**Specify in .dev.env:**
+
+```
+MAILGUN_API_KEY=
+MAILGUN_DOMAIN_NAME=
+MAILGUN_FROM_EMAIL=
+```
+
+<br/>
+
+### 062. Mailgun API
+
+    $ yarn install got
+    $ yarn install form-data
+
+<br/>
+
+### 063. Beautiful Emails
+
+MailGun -> Templates -> Create -> Alert
+
+```
+Name: verify-email
+Description: description
+```
+
+<br/>
+
+![Application](/img/pic-part01-les063-pic01.png?raw=true)
+
+<br/>
+
+### 064. Refactor
+
+<br/>
+
+### 065. Setting Up Tests
+
+    $ npm run test:watch
+
+<br/>
+
+### 066. Mocking
+
+<br/>
+
+### 067. Mocking part Two
+
+<br/>
+
+### 068. Writing Our First Test
+
+<br/>
+
+### 069. Recap
+
+<br/>
+
+### 070-071. createAccount Test
+
+<br/>
+
+### 072-073. login Test
+
+<br/>
+
+### 074. findById Test
+
+<br/>
+
+### 075-076. editProfile Test
+
+<br/>
+
+### 077. verifyEmail Test
+
+<br/>
+
+### 078. Conclusions
+
+<br/>
+
