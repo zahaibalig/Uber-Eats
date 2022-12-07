@@ -596,3 +596,104 @@ Description: description
 
 <br/>
 
+
+### 079. JWT Service Test Setup
+
+<br/>
+
+### 080. JWT Sign Test
+
+<br/>
+
+### 081. JWT Verify Test
+
+<br/>
+
+### 082. sendVerificationEmail Test
+
+<br/>
+
+### 083. sendEmail Test
+
+<br/>
+
+### 084-085. e2e Setup
+
+    $ docker-compose down
+    $ docker-compose up -d
+
+<br/>
+
+    $ npm run test:e2e
+
+<br/>
+
+### 086-087. Testing createAccount
+
+<br/>
+
+### 088. Testing login
+
+<br/>
+
+### 089. Testing userProfile
+
+<br/>
+
+### 090. Testing me
+
+<br/>
+
+### 091. Testing editProfile
+
+<br/>
+
+### 092. Testing verifyEmail
+
+<br/>
+
+### 093. Conclusions
+
+<br/>
+
+### 094. Restaurant Models
+
+<br/>
+
+### 095. Relationships and InputTypes
+
+<br/>
+
+### 096-097. createRestaurant
+
+```
+// CREATE RESTAURANT
+mutation {
+  createRestaurant(input: {
+    name: "BBQ House",
+    address: "123 Altavista",
+    coverImg: "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/asian.png",
+    categoryName: "Korean BBQ"
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+### 098-100. Roles
+
+Recreate containers with postrgresql db
+
+<br/>
+
+### 101-103. Edit Restaurant
+
+<br/>
+
+### 104. Edit Restaurant Testing
+
+<br/>
+
