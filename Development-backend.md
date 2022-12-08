@@ -697,3 +697,103 @@ Recreate containers with postrgresql db
 
 <br/>
 
+### 105. Delete Restaurant
+
+```
+// CREATE ACCOUNT OWNER
+mutation {
+  createAccount(input: {
+    email: "owner@gmail.com",
+    password: "pass1234"
+    role:Owner
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+// LOGIN
+mutation {
+  login(input: {
+    email: "owner@gmail.com",
+    password: "pass1234"
+  }){
+    ok
+    error
+    token
+  }
+}
+```
+
+<br/>
+
+```
+// CREATE RESTAURANT - OWNER
+mutation {
+  createRestaurant(input: {
+    name: "OWNER Restaurant 1",
+    address: "OWNER Address",
+    coverImg: "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/bbq.png",
+    categoryName: "OWNER Category"
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+// HEADERS
+```
+
+<br/>
+
+```
+// DELETE RESTAURANT
+mutation {
+  deleteRestaurant(input: {
+    restaurantId: 6,
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+### 106-107. Categories
+
+```
+// GET ALL CATEGORIES
+{
+  allCategories {
+    ok
+    error
+    categories {
+      slug
+      name
+    }
+  }
+}
+```
+
+returns:
+
+```json
+{
+  "data": {
+    "allCategories": {
+      "ok": true,
+      "error": null,
+      "categories": [
+        {
+          "slug": "owner-restaurant",
+          "name": "owner restaurant"
+        }
