@@ -797,3 +797,103 @@ returns:
           "slug": "owner-restaurant",
           "name": "owner restaurant"
         }
+      ]
+    }
+  }
+}
+```
+
+<br/>
+
+### 108. Category
+
+```
+{
+  category(slug: "owner-restaurant") {
+    ok
+    error
+    category {
+      id
+      name
+      slug
+      restaurantCount
+      restaurants {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+**returns:**
+
+```json
+{
+  "data": {
+    "category": {
+      "ok": true,
+      "error": null,
+      "category": {
+        "id": 1,
+        "name": "owner restaurant",
+        "slug": "owner-restaurant",
+        "restaurantCount": 1,
+        "restaurants": [
+          {
+            "id": 7,
+            "name": "OWNER Restaurant"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+### 109. Pagination
+
+```
+// GET CATEGORY
+{
+  category(input: {
+    slug: "owner-restaurant",
+    page: 1
+  }) {
+    ok
+    error
+    category {
+      id
+      name
+      restaurantCount
+      restaurants {
+        id
+        name
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+### 110. Restaurants
+
+```
+// GET RESTAURANTS
+{
+  restaurants (input: {}){
+    error
+    ok
+    totalPages
+    totalResults
+    results {
+      name
+      id
+    }
+  }
+}
+```
+
