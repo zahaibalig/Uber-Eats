@@ -997,3 +997,103 @@ returns:
         },
         {
           "name": "BBQ House"
+        }
+      ]
+    }
+  }
+}
+```
+
+<br/>
+
+### 113. Dish Entity
+
+<br/>
+
+### 114-115. Create Dish
+
+```
+// CREATE DISH
+mutation {
+  createDish(input: {
+    restaurantId: 10
+    name: "Mexican Chicken",
+    price: 12,
+    description: "Delicious!",
+    options: [
+      {
+      name: "Spice Level",
+      choices: ["Little bit", "Kill me"]
+      }
+    ]
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+// GET RESTAURANT BY ID: V2
+{
+  restaurant (input: {restaurantId: 10}){
+    error
+    ok
+    restaurant {
+      id
+      name
+      menu {
+        name,
+        price,
+        description
+        options {
+          name
+          extra
+          choices
+        }
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+**returns**
+
+```json
+{
+  "data": {
+    "restaurant": {
+      "error": null,
+      "ok": true,
+      "restaurant": {
+        "id": 10,
+        "name": "OWNER Restaurant",
+        "menu": [
+          {
+            "name": "Mexican Chicken",
+            "price": 12,
+            "description": "Delicious!",
+            "options": [
+              {
+                "name": "Spice Level",
+                "extra": null,
+                "choices": ["Little bit", "Kill me"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+### 116. Edit and Delete Dish
+
+```
