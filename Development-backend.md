@@ -1097,3 +1097,103 @@ mutation {
 ### 116. Edit and Delete Dish
 
 ```
+// GET RESTAURANT BY ID: V3
+{
+  restaurant (input: {restaurantId: 10}){
+    error
+    ok
+    restaurant {
+      id
+      name
+      menu {
+        id
+        name,
+        price,
+        description
+        options {
+          name
+          extra
+          choices {
+            name
+            extra
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+```
+// CREATE DISH
+mutation {
+  createDish(input: {
+    restaurantId: 10
+    name: "Mexican Chicken 1",
+    price: 12,
+    description: "Delicious!",
+    options: [
+      {
+        name: "Spice Level",
+        choices: [{name: "Little bit", extra: 1}, {name: "Kill Me", extra: 2}]
+      },    {
+        name: "Pickle",
+        extra:3
+      },
+      {
+        name: "Size",
+        choices: [{name: "L", extra: 2}, {name: "XL", extra: 7}]
+      }
+    ]
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+// DELETE DISH
+mutation {
+  deleteDish(input: {dishId: 2}){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+// EDIT DISH
+mutation {
+  editDish(input: {dishId: 8, name: "Super Mexican Taco Chicken"}){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+### 117. Order Entity
+
+    $ nest generate module orders
+
+<br/>
+
+### 118-124. Create Order
+
+```
+// CREATE ACCOUNT CLIENT (CUSTOMER)
+mutation {
+  createAccount(input: {
+    email: "client@gmail.com",
+    password: "pass1234"
+    role:Client
+  }){
+    ok
