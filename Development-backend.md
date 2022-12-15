@@ -1197,3 +1197,103 @@ mutation {
     role:Client
   }){
     ok
+   error
+  }
+}
+```
+
+<br/>
+
+```
+// CREATE ACCOUNT DELIVERY
+mutation {
+  createAccount(input: {
+    email: "delivery@gmail.com",
+    password: "pass1234"
+    role:Delivery
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+// LOGIN
+
+<br/>
+
+```
+// CREATE ORDER
+mutation {
+  createOrder(
+    input: {
+      restaurantId: 27
+      items: [
+        {
+          dishId: 4
+          options: [
+            { name: "Spice Level", choice: "Kill Me" }
+            { name: "Size", choice: "XL" }
+            { name: "Pickle" }
+          ]
+        }
+      ]
+    }
+  ) {
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+### 125-126. getOrders and getOrder
+
+```
+// GET ORDERS
+{
+  getOrders(input:{status: Pending}){
+    ok,
+    error,
+    orders {
+      id
+      status
+    }
+  }
+}
+```
+
+<br/>
+
+```
+// GET ORDER BY ID
+{
+  me {
+    email
+    role
+  }
+  getOrder(input:{id: 1}){
+    ok,
+    error,
+    order {
+      id
+      status
+    }
+  }
+}
+```
+
+<br/>
+
+### 127. Edit Order
+
+```
+// EDIT ORDER
+mutation{
+  editOrder(input:{
+    id:1
+    status: Cooked
+  }){
