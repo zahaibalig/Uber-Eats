@@ -1297,3 +1297,103 @@ mutation{
     id:1
     status: Cooked
   }){
+        ok
+    error
+  }
+}
+```
+
+<br/>
+
+### 128-129. Subscriptions
+
+    $ npm insta graphql-subscriptions
+
+<br/>
+
+### 130-131. Subscription Authentication
+
+<br/>
+
+### 132. PUB_SUB
+
+<br/>
+
+### 133. Subscription Filter
+
+<br/>
+
+### 134. Subscription Resolve
+
+<br/>
+
+### 135-136. pendingOrders Subscription
+
+```
+// OWNER - SUBSCRIPTION
+subscription {
+  pendingOrders {
+    id
+    items {
+      dish {
+        id
+        name
+        price
+      }
+      options {
+        name
+        choice
+      }
+    }
+  }
+}
+```
+
+<br/>
+
+```
+// CUSTOMER
+// CREATE ORDER IN STORE WHERE OWNER IS ABOVE
+```
+
+<br/>
+
+### 137. cookedOrders
+
+```
+// DELIVERY - SUBSCRIPTION
+subscription {
+  cookedOrders {
+    restaurant {
+      name
+    }
+    total
+    customer {
+      email
+    }
+  }
+}
+```
+
+```
+OWNER - EDIT ORDER
+```
+
+<br/>
+
+### 138-139. orderUpdates
+
+```
+// ORDER UPDATE - SUBSCRIPTION
+subscription{
+  orderUpdates(input: {
+    id: 14
+  }){
+    status
+  }
+}
+```
+
+<br/>
+
+### 140. takeOrder
