@@ -1397,3 +1397,103 @@ subscription{
 <br/>
 
 ### 140. takeOrder
+
+```
+// DELIVERY - TAKE ORDER
+mutation {
+  takeOrder(input: {
+    id: 15
+  }){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+// ORDER UPDATE - SUBSCRIPTION
+```
+
+<br/>
+
+### 141. Payment Introduction
+
+https://paddle.com/
+
+<br/>
+
+### 142. Payment Module
+
+    $ nest generate module payments
+
+<br/>
+
+### 143-144. createPayment
+
+```
+// OWNER - CREATE PAYMENT
+mutation {
+  createPayment(input: {
+    transactionId: "xxxxxxx",
+    restaurantId: 10
+  }) {ok
+  error}
+}
+```
+
+<br/>
+
+### 145. getPayments Resolver
+
+```
+// OWNER - GET TRANSACTIONS
+{
+  me {
+    payments {
+      transactionId
+    }
+  }
+}
+```
+
+<br/>
+
+```
+// OWNER - GET TRANSACTIONS
+{
+  getPayments {
+    ok
+    error
+    payments {
+      transactionId
+    }
+  }
+}
+```
+
+<br/>
+
+### 146. Task Scheduling is Awesome
+
+    $ yarn install --save @nestjs/schedule
+
+<br/>
+
+### 147. Promoting Restaurants (part 1)
+
+```
+mutation{
+  createPayment(input: { transactionId: "xxxxxxx", restaurantId: 10}){
+    ok
+    error
+  }
+}
+```
+
+<br/>
+
+```
+{
+  restaurants (input: {} ) {
