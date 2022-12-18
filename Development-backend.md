@@ -1497,3 +1497,29 @@ mutation{
 ```
 {
   restaurants (input: {} ) {
+ results {
+      name
+      isPromoted
+    }
+  }
+}
+```
+
+<br/>
+
+### 148. Promoting Restaurants (part 2)
+
+<br/>
+
+### 149. Backend Conclusions
+
+<br/>
+
+---
+
+<br/>
+
+**Marley**
+
+Any questions in english: <a href="https://jsdev.org/chat/">Telegram Chat</a>  
+Любые вопросы на русском: <a href="https://jsdev.ru/chat/">Телеграм чат</a>
